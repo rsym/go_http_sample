@@ -9,7 +9,7 @@ import (
 	"regexp"
 	"testing"
 
-	"./handler"
+	"rsym/go_http_sample/handler"
 )
 
 func TestTop(t *testing.T) {
@@ -28,6 +28,7 @@ func TestTop(t *testing.T) {
 		t.Errorf("res.StatusCode should be 200, but %d", res.StatusCode)
 	}
 
+	// redis関連のテストはまだ実装してない
 }
 
 func TestForm(t *testing.T) {
@@ -103,4 +104,6 @@ func TestSubmit(t *testing.T) {
 	if !regexp.MustCompile(s).MatchString(string(body)) {
 		t.Errorf("responce body should be contain '%s', but doesn't contain.", s)
 	}
+
+	// redis関連のテストはまだ実装してない
 }

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"./handler"
+	"rsym/go_http_sample/handler"
 )
 
 func main() {
